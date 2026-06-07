@@ -21,10 +21,8 @@ module.exports = {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-        { from: './*.ico' },
-        { from: './*.png' },
-        { from: './*.css' },
-        { from: './*.html' }
+        { from: './*.css', noErrorOnMissing: true },
+        { from: './*.html', noErrorOnMissing: true },
       ],
       options: {
         concurrency: 100,
